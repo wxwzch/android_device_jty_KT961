@@ -2,6 +2,7 @@
 # Chipset: MT6580
 # Android: 5.1 (API 22)
 
+DEVICE_PATH := device/jty/KT961
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -54,6 +55,7 @@ TW_NO_FAT_FORMAT := false
 TW_NO_SCREEN_TIMEOUT := true
 
 # MTK specific
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
+# BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
+BOARD_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 # BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
