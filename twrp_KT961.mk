@@ -2,6 +2,11 @@
 
 LOCAL_PATH := $(call my-dir)
 
+# Include BoardConfig.mk to set TARGET_RECOVERY_FSTAB etc.
+include device/jty/KT961/BoardConfig.mk
+
+$(warning twrp_KT961.mk is loaded)
+
 ifeq ($(TARGET_DEVICE),KT961)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
