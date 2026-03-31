@@ -3,6 +3,13 @@
 # Android: 5.1 (API 22)
 
 DEVICE_PATH := device/jty/KT961
+
+# 强制导出 fstab 路径（放在最前面）
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+BOARD_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+export TARGET_RECOVERY_FSTAB
+export BOARD_RECOVERY_FSTAB
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -38,8 +45,6 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-TARGET_RECOVERY_FSTAB := device/jty/KT961/recovery.fstab  #$(DEVICE_PATH)/recovery.fstab
-BOARD_RECOVERY_FSTAB := device/jty/KT961/recovery.fstab
 
 # TWRP specific
 TW_THEME := portrait_hdpi
@@ -56,9 +61,9 @@ TW_NO_FAT_FORMAT := false
 TW_NO_SCREEN_TIMEOUT := true
 
 # MTK specific
-# BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 BOARD_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
-# BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+
+# 调试信息（可选，构建时会输出）
 $(warning TARGET_RECOVERY_FSTAB = $(TARGET_RECOVERY_FSTAB))
 $(warning BOARD_RECOVERY_FSTAB = $(BOARD_RECOVERY_FSTAB))
