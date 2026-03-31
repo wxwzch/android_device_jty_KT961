@@ -1,6 +1,7 @@
 # Device Tree for KT961 (TWRP)
 
-LOCAL_PATH := $(call my-dir)
+# 显式定义 LOCAL_PATH，因为该文件可能被其他 Makefile 包含时未设置
+LOCAL_PATH := device/jty/KT961
 
 # 必须先包含 BoardConfig.mk 以确保变量生效
 include $(LOCAL_PATH)/BoardConfig.mk
