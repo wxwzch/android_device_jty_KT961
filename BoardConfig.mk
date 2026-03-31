@@ -4,11 +4,9 @@
 
 DEVICE_PATH := device/jty/KT961
 
-# 强制导出 fstab 路径（放在最前面）
+# 定义 fstab 路径（在 BoardConfig 中定义，但不在此处导出）
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 BOARD_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
-export TARGET_RECOVERY_FSTAB
-export BOARD_RECOVERY_FSTAB
 
 # Architecture
 TARGET_ARCH := arm
