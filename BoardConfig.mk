@@ -38,7 +38,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/jty/KT961/recovery.fstab  #$(DEVICE_PATH)/recovery.fstab
 
 # TWRP specific
 TW_THEME := portrait_hdpi
